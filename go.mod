@@ -1,4 +1,4 @@
-module github.com/chaosblade-io/chaosblade-spec-go
+module github.com/lomoonmoonbird/chaosblade-spec-go
 
 go 1.20
 
