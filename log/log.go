@@ -3,7 +3,7 @@ package log
 import (
 	"context"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/sirupsen/logrus"
 	"runtime"
 )

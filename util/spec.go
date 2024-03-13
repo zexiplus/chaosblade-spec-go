@@ -23,7 +23,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 )
 
 // CreateYamlFile converts the spec.Models to spec file

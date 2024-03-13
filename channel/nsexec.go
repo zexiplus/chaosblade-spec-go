@@ -3,9 +3,9 @@ package channel
 import (
 	"context"
 	"fmt"
-	"github.com/chaosblade-io/chaosblade-spec-go/log"
-	"github.com/chaosblade-io/chaosblade-spec-go/spec"
-	"github.com/chaosblade-io/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 	"os"
 	"os/exec"
 	"path"
