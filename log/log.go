@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"runtime"
 
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
 	"github.com/sirupsen/logrus"
-	"github.com/spencercjh/chaosblade-spec-go/spec"
 )
 
 func Panicf(ctx context.Context, format string, a ...interface{}) {

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/spencercjh/chaosblade-spec-go/log"
-	"github.com/spencercjh/chaosblade-spec-go/spec"
-	"github.com/spencercjh/chaosblade-spec-go/util"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 )
 
 const (
