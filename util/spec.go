@@ -23,7 +23,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/spencercjh/chaosblade-spec-go/spec"
 )
 
 // CreateYamlFile converts the spec.Models to spec file
@@ -157,8 +157,8 @@ func ConvertSpecToModels(commandSpec spec.ExpModelCommandSpec, prepare spec.ExpP
 				}
 				return flags
 			}(),
-			ActionPrograms:   action.Programs(),
-			ActionCategories: action.Categories(),
+			ActionPrograms:    action.Programs(),
+			ActionCategories:  action.Categories(),
 			ActionProcessHang: action.ProcessHang(),
 		}
 		model.ExpActions = append(model.ExpActions, actionModel)

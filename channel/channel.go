@@ -22,9 +22,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/spencercjh/chaosblade-spec-go/log"
+	"github.com/spencercjh/chaosblade-spec-go/spec"
+	"github.com/spencercjh/chaosblade-spec-go/util"
 )
 
 // grep ${key}
@@ -40,15 +40,15 @@ func GetPidsByLocalPort(ctx context.Context, channel spec.Channel, localPort str
 
 	pids := []string{}
 
-	//on centos7, ss outupt pid with 'pid='
-	//$ss -lpn 'sport = :80'
-	//Netid State      Recv-Q Send-Q   Local Address:Port   Peer Address:Port
-	//tcp   LISTEN     0      128       *:80                 *:* users:(("tengine",pid=237768,fd=6),("tengine",pid=237767,fd=6))
+	// on centos7, ss outupt pid with 'pid='
+	// $ss -lpn 'sport = :80'
+	// Netid State      Recv-Q Send-Q   Local Address:Port   Peer Address:Port
+	// tcp   LISTEN     0      128       *:80                 *:* users:(("tengine",pid=237768,fd=6),("tengine",pid=237767,fd=6))
 
-	//on centos6, ss output pid without 'pid='
-	//$ss -lpn 'sport = :80'
-	//Netid State      Recv-Q Send-Q   Local Address:Port   Peer Address:Port
-	//tcp   LISTEN     0      128       *:80                 *:* users:(("tengine",237768,fd=6),("tengine",237767,fd=6))
+	// on centos6, ss output pid without 'pid='
+	// $ss -lpn 'sport = :80'
+	// Netid State      Recv-Q Send-Q   Local Address:Port   Peer Address:Port
+	// tcp   LISTEN     0      128       *:80                 *:* users:(("tengine",237768,fd=6),("tengine",237767,fd=6))
 	response := channel.Run(ctx, "ss", fmt.Sprintf("-pln sport = :%s", localPort))
 	if !response.Success {
 		return pids, fmt.Errorf(response.Err)

@@ -28,11 +28,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
-
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
 	"github.com/shirou/gopsutil/process"
+	"github.com/spencercjh/chaosblade-spec-go/log"
+	"github.com/spencercjh/chaosblade-spec-go/spec"
+	"github.com/spencercjh/chaosblade-spec-go/util"
 )
 
 type LocalChannel struct {
@@ -269,7 +268,7 @@ func execScript(ctx context.Context, script, args string) *spec.Response {
 	}
 	log.Debugf(ctx, "Command: %s %s", script, args)
 	// TODO /bin/sh 的问题
-	cmd := exec.CommandContext(ctx, "sudo", "/bin/sh", "-c", script+" "+args)
+	cmd := exec.CommandContext(ctx, "/bin/sh", "-c", script+" "+args)
 	output, err := cmd.CombinedOutput()
 	outMsg := string(output)
 	log.Debugf(ctx, "Command Result, output: %v, err: %v", outMsg, err)

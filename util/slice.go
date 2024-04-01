@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
+	"github.com/spencercjh/chaosblade-spec-go/spec"
 )
 
 // Remove the item by the index
