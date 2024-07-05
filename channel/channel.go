@@ -22,9 +22,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/lomoonmoonbird/chaosblade-spec-go/log"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/spec"
-	"github.com/lomoonmoonbird/chaosblade-spec-go/util"
+	"github.com/zexiplus/chaosblade-spec-go/log"
+	"github.com/zexiplus/chaosblade-spec-go/spec"
+	"github.com/zexiplus/chaosblade-spec-go/util"
 )
 
 // grep ${key}
